@@ -70,7 +70,7 @@ int main()
   while (1)
   {
     /* doesn't handle debounce */
-    KEYPAD_u8GetChar(&KeyPressed, (u8 *)keybadMatrix);
+    KEYPAD_voidGetChar(&KeyPressed, (u8 *)keybadMatrix);
     u8 tempVal;
     /* update each racket */
     switch (KeyPressed)
@@ -170,7 +170,7 @@ int main()
     LCD_4_bit_voidWriteCustomChar(LeftRacket.currentLine, LeftRacket.currentCol, 0);
     LCD_4_bit_voidWriteCustomChar(RightRacket.currentLine, RightRacket.currentCol, 0);
     LCD_4_bit_voidWriteCustomChar(ball.currentLine, ball.currentCol, 1);
-    _delay_ms(250);
+    _delay_ms(100);
   }
 
   return 0;
